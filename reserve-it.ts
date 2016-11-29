@@ -3,6 +3,7 @@ const readline = require('readline');
 const google = require('googleapis');
 const googleAuth = require('google-auth-library');
 const dotenv = require('dotenv');
+const exec = require('child_process').execFile;
 
 dotenv.load();
 
@@ -19,7 +20,7 @@ fs.readFile('client_secret.json', function processClientSecrets(err, content) {
     return;
   }
 
-  authorize(JSON.parse(content), (auth) => { setInterval(main, 1000, auth); });
+  authorize(JSON.parse(content), (auth) => { setInterval(main, 10000, auth); });
 });
 
 function authorize(credentials, callback) {
@@ -118,10 +119,10 @@ function main(auth) {
     }
     
     if (busy) {
-      console.log('Busy');
+      exec('./fbcolor', ['0'], {}, (err, stdout, stdin) => { if (err) console.log(err) });
     }
     else {
-      console.log('Available');
+      exec('./fbcolor', ['1'], {}, (err, stdout, stdin) => { if (err) console.log(err) });
     }
   });
 };
