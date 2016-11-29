@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "reserve-it.js",
   "license": "MIT",
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/christensenep/ReserveIT.git"
+  },
+  "scripts": {
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./reserve-it.ts"
   },
   "dependencies": {
     "dotenv": "^2.0.0",
@@ -13,6 +16,10 @@
     "googleapis": "^14.2.0"
   },
   "devDependencies": {
-    "eslint": "^3.11.1"
+    "@types/node": "^0.0.0",
+    "eslint": "^3.11.1",
+    "nodemon": "^1.11.0",
+    "ts-node": "^1.7.0",
+    "typescript": "^2.0.10"
   }
 }
