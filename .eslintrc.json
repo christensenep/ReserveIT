@@ -1,0 +1,16 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": 2,
+        "no-var": 2,
+        "prefer-const": 2,
+        "eqeqeq": 2,
+        "space-before-function-paren": [2, {
+          "anonymous": "always",
+          "named": "never"
+        }]
+    }
+}
