@@ -13,13 +13,13 @@
   "dependencies": {
     "dotenv": "^2.0.0",
     "google-auth-library": "^0.9.10",
-    "googleapis": "^14.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^0.0.0",
-    "eslint": "^3.11.1",
+    "googleapis": "^14.2.0",
     "nodemon": "^1.11.0",
     "ts-node": "^1.7.0",
-    "typescript": "^2.0.10"
+    "typescript": "^2.0.10",
+    "@types/node": "^0.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1"
   }
 }
